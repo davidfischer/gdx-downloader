@@ -2,7 +2,9 @@
 
 ##############################################################################
 # GDX Downloader - the MLB Gameday downloader
-# Version 0.0.1
+# Homepage: https://github.com/davidfischer/gdx-downloader
+# Author: David Fischer <djfische@gmail.com>
+# Version: 0.0.1
 ##############################################################################
 
 # Wait time in seconds between HTTP requests
