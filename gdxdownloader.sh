@@ -11,7 +11,7 @@
 # This wait time should NEVER be set to zero unless you're making only a
 # couple requests. Without this wait, the downloader could make 20+
 # requests per second and result in the banstick from the Gameday guys.
-WAIT=0.5
+WAIT=0.1
 
 # Recursive depth to download
 LEVEL=10
