@@ -35,16 +35,16 @@ Directory structure
         |   |   |   |-- (\d{6})_(\d).xml   # Batter's daily stats # _2 = doubleheader
         |   |   |-- gid_(\d{4})_(\d{2})_(\d{2})_\w{3}mlb_\w{3}mlb_(\d)    # YYYY_MM_DD, team abbrevs, doubleheader
         |   |   |   |-- batters/
+        |   |   |   |   |-- (\d{6}).xml   # Batters' daily stats
         |   |   |   |-- bench.xml
         |   |   |   |-- boxscore.xml
         |   |   |   |-- game.xml
         |   |   |   |-- inning/  # Contains pitch stats by inning (inc. pitch/fx)
         |   |   |   |-- linescore.xml
         |   |   |   |-- pitchers/
+        |   |   |   |   |-- (\d{6}).xml   # Pitchers' daily stats
         |   |   |   |-- players.xml
         |   |   |   |-- plays.xml
-        |   |   |-- pitchers/
-        |   |   |   |-- (\d{6})_(\d).xml   # Pitcher's daily stats # _2 = doubleheader
         |--- pitchers/
             |-- (\d{6}).xml  # Season stats for pitchers with the given MLB id
     aaa/  # Triple-A ball

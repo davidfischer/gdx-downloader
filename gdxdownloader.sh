@@ -41,9 +41,10 @@ If downloading a directory, the URL *MUST* end with a '/'
 [[ -z "$1" ]] && echo "$USAGE" && exit 1
 
 # Download all files under a particular URL
-# 
+#
 # Ignore robots.txt since the website blocks all robot access
 wget --wait=$WAIT --random-wait --no-host-directories \
      --cut-dirs=$CUT_DIRS --recursive --level=$LEVEL --relative \
      --no-parent --no-verbose --append-output=$LOGFILE \
-     --exclude-directories="*premium*" -e robots=off $1
+     --exclude-directories="*premium*" --reject="[0-9]*_[0-9].xml" \
+     -e robots=off $1
