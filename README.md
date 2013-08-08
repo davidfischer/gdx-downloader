@@ -1,7 +1,7 @@
 GDX Downloader
 ==============
 
-This is a simple downloader for the data from the
+This is a simple downloader for the data from the MLB
 [Gameday website](http://gdx.mlb.com/components/game/mlb/).
 
 
@@ -20,6 +20,9 @@ Usage
 Output goes to mlb/ in the current directory and starts at components/game/mlb.
 If downloading a directory, the URL *MUST* end with a '/'. The downloader
 goes [breadth-first](https://en.wikipedia.org/wiki/Breadth-first_search).
+
+Downloading a full day's data (~10 games) takes about 15 minutes and takes
+about 20MB on disk.
 
 
 Directory structure
