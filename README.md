@@ -31,18 +31,19 @@ Directory structure
         |   |-- (\d{6}).xml  # Season stats for batters with the given MLB id
         |-- month_(\d{2})/  # A specific month of games
         |   |-- day_(\d{2})/  # A specific day of games
-        |   |   |-- batters/
-        |   |   |   |-- (\d{6})_(\d).xml   # Batter's daily stats # _2 = doubleheader
         |   |   |-- gid_(\d{4})_(\d{2})_(\d{2})_\w{3}mlb_\w{3}mlb_(\d)    # YYYY_MM_DD, team abbrevs, doubleheader
         |   |   |   |-- batters/
-        |   |   |   |   |-- (\d{6}).xml   # Batters' daily stats
+        |   |   |   |   |-- (\d{6}).xml   # Batters' daily stats including player stats
         |   |   |   |-- bench.xml
         |   |   |   |-- boxscore.xml
         |   |   |   |-- game.xml
-        |   |   |   |-- inning/  # Contains pitch stats by inning (inc. pitch/fx)
+        |   |   |   |-- inning/
+        |   |   |   |   |-- inning_(\d+).xml  # Contains atbats by inning (inc. pitch/fx)
+        |   |   |   |   |-- inning_hit.xml  # Contains info about balls hit into play
+        |   |   |   |   |-- inning_Scores.xml  # Contains info about Scoring plays
         |   |   |   |-- linescore.xml
         |   |   |   |-- pitchers/
-        |   |   |   |   |-- (\d{6}).xml   # Pitchers' daily stats
+        |   |   |   |   |-- (\d{6}).xml   # Pitchers' daily stats including player stats
         |   |   |   |-- players.xml
         |   |   |   |-- plays.xml
         |--- pitchers/
