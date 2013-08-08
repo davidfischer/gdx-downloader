@@ -46,5 +46,5 @@ If downloading a directory, the URL *MUST* end with a '/'
 wget --wait=$WAIT --random-wait --no-host-directories \
      --cut-dirs=$CUT_DIRS --recursive --level=$LEVEL --relative \
      --no-parent --no-verbose --append-output=$LOGFILE \
-     --exclude-directories="*premium*" --reject="[0-9]*_[0-9].xml" \
+     --reject="[0-9]*_[0-9].xml,atv*.xml,scoreboard_*.xml,*.json,ac.xml,bc.xml,ec.xml,o[0-9].xml,pch.xml,pcu.xml,pf[a-z].xml,pkn.xml,psi.xml,psl.xml,r0.xml,r123.xml,risp.xml,ron.xml,vl.xml,vr.xml,zn.xml,pitchtendencies*.xml,notifications_*.xml" \
      -e robots=off $1
