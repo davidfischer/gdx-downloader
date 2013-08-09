@@ -13,9 +13,6 @@
 # requests per second and result in the banstick from the Gameday guys.
 WAIT=0.1
 
-# Recursive depth to download
-LEVEL=10
-
 # This is the number of directories (not counting the host) to cut from output
 # For example, for http://gdx.mlb.com/components/game/mlb/year_2012
 # cutting 2 directories would remove "componenents" and "game" and place
@@ -43,8 +40,9 @@ If downloading a directory, the URL *MUST* end with a '/'
 # Download all files under a particular URL
 #
 # Ignore robots.txt since the website blocks all robot access
+# Only download if the server version is newer (timestamping)
 wget --wait=$WAIT --random-wait --no-host-directories \
-     --cut-dirs=$CUT_DIRS --recursive --level=$LEVEL --relative \
+     --cut-dirs=$CUT_DIRS --mirror --relative \
      --no-parent --no-verbose --append-output=$LOGFILE \
      --reject="[0-9]*_[0-9].xml,atv*.xml,scoreboard_*.xml,*.json,ac.xml,bc.xml,ec.xml,o[0-9].xml,pch.xml,pcu.xml,pf[a-z].xml,pkn.xml,psi.xml,psl.xml,r0.xml,r123.xml,risp.xml,ron.xml,vl.xml,vr.xml,zn.xml,pitchtendencies*.xml,notifications_*.xml,*.plist" \
      -e robots=off $1
